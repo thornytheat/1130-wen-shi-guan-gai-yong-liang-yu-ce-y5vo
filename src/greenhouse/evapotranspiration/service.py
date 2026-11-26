@@ -46,3 +46,10 @@ def inspect(documents: Iterable[Mapping]) -> Intake:
 
 
 from .forecast_audit import backtest, benchmark_choice, summarize
+
+def __getattr__(name):
+    if name.startswith("__"):
+        raise AttributeError(name)
+    import importlib
+    governance = importlib.import_module("greenhouse.release_governance")
+    return getattr(governance, name)

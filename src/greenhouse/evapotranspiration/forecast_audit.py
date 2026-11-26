@@ -15,6 +15,7 @@ class CropTrial:
     actual: float
     benchmark: float
     prefix_support: int
+    published_day: int | None = None
 
     def public(self):
         return {
@@ -25,6 +26,7 @@ class CropTrial:
             "实际（升）":round(self.actual,2),
             "基线（升）":round(self.benchmark,2),
             "前缀训练量":self.prefix_support,
+            "发布日":self.published_day,
         }
 
 
@@ -48,7 +50,7 @@ def backtest(previous, *, boundary, days, penalty):
                 training=[(row.features(),row.water) for row in fitting]
                 estimator=train(training,ridge=penalty)
                 benchmark=median(row.water for row in fitting if row.day>=day-7) if any(row.day>=day-7 for row in fitting) else median(row.water for row in fitting)
-                trials.extend(CropTrial(crop,day,row.zone,forecast(estimator,row.features()),row.water,benchmark,len(training)) for row in fixtures)
+                trials.extend(CropTrial(crop,day,row.zone,forecast(estimator,row.features()),row.water,benchmark,len(training),row.published_day) for row in fixtures)
     return trials
 
 
@@ -83,3 +85,12 @@ def benchmark_choice(history, spec):
     if not fractions:
         return spec["default"],results
     return min(fractions)[1],results
+
+
+def __getattr__(name):
+    # Compatibility facade for crop-scoped promotion/release use cases.
+    if name.startswith("__"):
+        raise AttributeError(name)
+    from importlib import import_module
+    governance = import_module("greenhouse.release_governance")
+    return getattr(governance, name)
