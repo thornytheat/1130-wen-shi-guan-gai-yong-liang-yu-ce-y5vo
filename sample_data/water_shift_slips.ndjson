@@ -1,0 +1,14 @@
+{"ticket": "R-00", "zone": "棚-01", "pump": "西渠", "opening_l": 3000, "closing_l": 3400, "logged_min": 800, "revision": 2}
+{"ticket": "R-01", "zone": "棚-02", "pump": "北井", "opening_l": 3050, "closing_l": 3477, "logged_min": 804, "revision": 2}
+{"ticket": "R-02", "zone": "棚-03", "pump": "西渠", "opening_l": 3100, "closing_l": 3554, "logged_min": 808, "revision": 2}
+{"ticket": "R-03", "zone": "棚-04", "pump": "北井", "opening_l": 3150, "closing_l": 3631, "logged_min": 812, "revision": 2}
+{"ticket": "R-04", "zone": "棚-05", "pump": "西渠", "opening_l": 3200, "closing_l": 3708, "logged_min": 816, "revision": 2}
+{"ticket": "R-05", "zone": "棚-06", "pump": "北井", "opening_l": 3250, "closing_l": 3785, "logged_min": 820, "revision": 2}
+{"ticket": "R-06", "zone": "棚-07", "pump": "西渠", "opening_l": 3300, "closing_l": 3862, "logged_min": 824, "revision": 2}
+{"ticket": "R-07", "zone": "棚-08", "pump": "北井", "opening_l": 3350, "closing_l": 3939, "logged_min": 828, "revision": 2}
+{"ticket": "R-08", "zone": "棚-09", "pump": "西渠", "opening_l": 3400, "closing_l": 4016, "logged_min": 832, "revision": 2}
+{"ticket": "R-09", "zone": "棚-10", "pump": "北井", "opening_l": 3450, "closing_l": 4093, "logged_min": 836, "revision": 2}
+{"ticket": "R-10", "zone": "棚-11", "pump": "西渠", "opening_l": 3500, "closing_l": 4170, "logged_min": 840, "revision": 2}
+{"ticket": "R-11", "zone": "棚-12", "pump": "北井", "opening_l": 3550, "closing_l": 4247, "logged_min": 844, "revision": 2}
+{"ticket": "R-03", "zone": "棚-04", "pump": "北井", "opening_l": 3150, "closing_l": 3400, "logged_min": 812, "revision": 1}
+{"ticket": "R-35", "zone": "棚-05", "pump": "西渠", "opening_l": 3200, "closing_l": 5, "logged_min": 816, "revision": 2}
